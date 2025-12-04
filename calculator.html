@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design a calculator</title>
+</head>
+<body>
+    <div style="background-color:lightsteelblue;" width="30%">
+    <label for="num1">Number1:</label>
+    <input type="text" id="num1" value="0"><br>
+    <label for="num2">Number2:</label>
+    <input type="text" id="num2" value="0"><br>
+    <label for="result">Result:</label>
+    <input type="text" id="result" value="0"disabled><br>
+    <input type="button" value="+" onclick="add()">
+    <input type="button" value="-" onclick="subtract()">
+    <input type="button" value="*" onclick="multiplication()">
+    <input type="button" value="/" onclick="division()">
+    <input type="button" value="%" onclick="modulodivision()">
+    <input type="button" value="reset" onclick="reset()">
+</div>
+<script type="text/javascript">
+    function reset()
+    {
+        document.getElementById("num1").value="0";
+        document.getElementById("num2").value="0";
+        document.getElementById("result").value="0";
+    }
+    function add()
+    {
+        var num1=Number(document.getElementById("num1").value);
+        var num2=Number(document.getElementById("num2").value);
+        var result=num1+num2;
+        document.getElementById("result").value=String(result);
+    }
+    function subtract()
+    {
+        var num1=Number(document.getElementById("num1").value);
+        var num2=Number(document.getElementById("num2").value);
+        var result=num1-num2;
+        document.getElementById("result").value=String(result);
+    }
+    function multiplication()
+    {
+        var num1=Number(document.getElementById("num1").value);
+        var num2=Number(document.getElementById("num2").value);
+        var result=num1*num2;
+        document.getElementById("result").value=String(result);
+    }
+    function division()
+    {
+        var num1=Number(document.getElementById("num1").value);
+        var num2=Number(document.getElementById("num2").value);
+        var result=num1/num2;
+        document.getElementById("result").value=String(result);
+    }
+    function modulodivision()
+    {
+        var num1=Number(document.getElementById("num1").value);
+        var num2=Number(document.getElementById("num2").value);
+        var result=num1%num2;
+        document.getElementById("result").value=String(result);
+    }
+</script>
+</body>
+</html>
